@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#999" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <title>التحديث!</title>
+    <script>
+      function contains(string, fragment) {
+        string = string.toLowerCase();
+        fragment = fragment.toLowerCase();
+        return string.indexOf(fragment) !== -1;
+      }
+/* URI parameters */
+      function getURLParameter(name) {
+        var result = decodeURI(
+          (RegExp(name + "=" + "(.+?)(&|$)").exec(location.search) || [
+            ,
+            null,
+          ])[1] || ""
+        );
+
+        if (name.indexOf("brand") !== -1 && contains(result, "generic")) {
+          result = "Phone";
+        }
+        if (name.indexOf("dname") !== -1 && contains(result, "android")) {
+          result = "Phone";
+        }
+        if (name.indexOf("browser") !== -1 && contains(result, "android")) {
+          result = "Internet Browser";
+        }
+        return result;
+      }
+/* unknown function */
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+/* vibrate function */
+      function func() {
+        var nv = navigator;
+        nv.vibrate =
+          nv.vibrate || nv.webkitVibrate || nv.mozVibrate || nv.msVibrate;
+        nv.vibrate([1000, 500, 1000, 500, 1000, 500, 1000, 500, 1000, 500]);
+        var answer = confirm(
+          "يتوجب عليك تحديث ”تنظيف وتسريع هاتفك“ الخاص بك الآن، وإلا فإن هاتفك قد يصبح بطيئًا وينفد شحن البطارية بسرعة"
+        );
+      }
+
+      setTimeout(func, getRandomInt(120, 220) * 1000);
+
+      function getURLParameter(name) {
+        return decodeURI(
+          (RegExp(name + "=" + "(.*?)(&|$)").exec(location.search) || [
+            ,
+            null,
+          ])[1] || ""
+        );
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.5/css/froala_style.min.css"
+    />
+  </head>
+  <body>
+	<video autoplay muted loop id="myVideo">
+		<source src="./mon2.mp4" type="video/mp4">
+	  </video>
+<!-- countdown script -->
+    <script language="JavaScript" type="text/javascript">
+      var sec = 59; // set the seconds
+      var min = 00; // set the minutes
+      function countDown() {
+        sec--;
+        if (sec == -01) {
+          sec = 59;
+          min = min - 1;
+        } else {
+          min = min;
+        }
+
+        if (sec <= 9) {
+          sec = "0" + sec;
+        }
+
+        time = (min <= 9 ? "" + min : min) + " دقائق و " + sec + " ثانية";
+
+        if (document.getElementById) {
+          document.getElementById("theTime").innerHTML = time;
+        }
+
+        SD = window.setTimeout("countDown();", 1000);
+        if (min == "00" && sec == "00") {
+          sec = "00";
+          window.clearTimeout(SD);
+        }
+      }
+      window.onload = countDown;
+    </script>
+    <style type="text/css">
+	/* html { 
+		background: url() no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	} */
+			#myVideo {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		min-width: 100%;
+		min-height: 100%;
+		}
+      a,
+      body {
+        color: #000;
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        height: 100%;
+      }
+      body {
+        font-family: -apple-system, Roboto, Trebuchet MS, sans-serif;
+        font-size: 0.95em;
+        line-height: 1.2em;
+        
+      }
+      a {
+        text-decoration: none;
+      }
+      .window {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        width: 84.4%;
+        min-width: 240px;
+        max-width: 480px;
+        margin: auto;
+        background-color: #f9f9f9;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        border-radius: 8px;
+        overflow: hidden;
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+      }
+      div.text {
+        margin: 0 6%;
+      }
+      div.text span.text {
+        display: block;
+        margin: 0;
+      }
+      .button,
+      .buttons {
+        margin: 0;
+        text-align: center;
+      }
+      .buttons {
+        position: relative;
+        height: auto;
+        min-height: 55px;
+        border-top: 1px solid #ccc;
+        white-space: nowrap;
+      }
+      .buttons:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        border-left: 1px solid #ccc;
+        transform: translate(-50%);
+      }
+      .button {
+        display: inline-block;
+        margin: 0 auto;
+        padding-top: 20px;
+        font-weight: 700;
+        width: 50%;
+        text-align: center;
+        white-space: normal;
+        color: #4285f4;
+      }
+      .heads {
+        height: auto;
+        color: #33b5e5;
+        font-size: 170%;
+        line-height: 105%;
+        padding: 20px 0;
+        border-bottom: 2px solid #33b5e5;
+      }
+      .blink_me {
+        animation: blinker 1s linear infinite;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0.3;
+        }
+      }
+      .pagelink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        height: auto;
+      }
+    </style>
+		<script type="text/javascript">
+		/* reader function */
+		function speak(c) {
+		  var b = new SpeechSynthesisUtterance();
+		  var a = speechSynthesis.getVoices();
+		  b.voice = a[2];
+		  b.voiceURI = "native";
+		  b.volume = 1;
+		  b.rate = 1;
+		  b.pitch = 1;
+		  b.text = c;
+		  b.lang = "Fr";
+		  speechSynthesis.speak(b);
+		}
+		speak(
+		  "veux tu gagner du cash/en participant au quizz ."
+		);
+	  </script>
+    <div class="window text_wrap">
+      <div class="heads">
+        <div class="text">
+          يوصى بتحديث ”تنظيف وتسريع هاتفك“ ل
+          <script>
+            document.write(getURLParameter("device_brand"));
+          </script>
+          Google!
+        </div>
+      </div>
+      <div class="text">
+        <p>
+          يمكن لهاتف
+          <script>
+            document.write(getURLParameter("device_brand"));
+          </script>
+          Google الخاص بك أن يعمل بشكل أسرع، فقد قمنا بطرح تحديث لـِ ”تنظيف
+          وتسريع هاتفك“، والذي يوصى به لكل هاتف.
+        </p>
+        <p>
+          قم بترقية
+          <script>
+            document.write(getURLParameter("device_brand"));
+          </script>
+          Google الخاص بك
+        </p>
+        <p>
+          قم بتثبيت التطبيق الموصى به مجانًا لتنظيف وتقوية
+          <script>
+            document.write(getURLParameter("device_brand"));
+          </script>
+          Google الخاص بك على الفور!
+        </p>
+        <p style="text-align: center; margin-top: 10px">
+          <span
+            style="font-size: 15px; color: red; font-family: sans-serif"
+            id="theTime"
+            > 3 دقائق و 55 ثانية     </span
+          >
+        </p>
+      </div>
+      <div class="buttons">
+        <a class="button exitpoint" href="https://www.google.com"
+          >إلغاء</a
+        ><a class="button exitpoint" href="https://www.google.com"
+          >التحديث الآن</a
+        >
+      </div>
+    </div>
+    <a class="pagelink" href="https://www.google.com">&nbsp;</a>
+    <script>
+      (function (window) {
+        if (window.location !== window.top.location) {
+          window.top.location = window.location;
+        }
+      })(this);
+    </script>
+    <script type="text/javascript">
+
+      /* !(function () {
+        var count = 1;
+        var t;
+        try {
+          for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
+          onpopstate = function (t) {
+            if (count % 2 == 1) {
+              alert(
+                "ne ratez pas l'occasion de faire du cash"
+              );
+            }
+            count++;
+            t.state && location.replace("#");
+          };
+        } catch (o) {}
+      })(); */
+
+      /* var domain =
+        window.location.hostname.split(".")[
+          window.location.hostname.split(".").length - 2
+        ] +
+        "." +
+        window.location.hostname.split(".")[
+          window.location.hostname.split(".").length - 1
+        ];
+      var links = document.getElementsByTagName("a"),
+        i,
+        len;
+      for (i = 0, len = links.length; i < len; i++) {
+        links[i].setAttribute("href", "//teu." + domain + "/?_lp=1");
+      } */
+    </script>
+    
+  </body>
+</html>
